@@ -1,4 +1,5 @@
 <?php
+include "Myconnection.php";
 include "HtmlData.php";
 $obj=new HtmlData();
 if(isset($_POST["submit"]))
@@ -21,12 +22,12 @@ if(isset($_POST["submit"]))
 
 <div class="container">
  <?php
- echo $obj->getjumbotron();
+ //echo $obj->getjumbotron();
 
  ?>
   <p>This is some text.</p>      
   <p>This is another text.</p>    
-  <?= $obj->printTable();?>  
+
 </div>
 <form action="<?= $_SERVER['PHP_SELF']?>" method="POST">
 <input type="text" name="name" required placeholder="enter your name">
@@ -36,5 +37,6 @@ if(isset($_POST["submit"]))
 
 
 </form>
+
 </body>
 </html>

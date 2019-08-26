@@ -17,7 +17,7 @@ class Myconnection
         $this->dbpassword= filter_var($dbpassword, FILTER_SANITIZE_STRING);
         $this->dbname= filter_var($dbname, FILTER_SANITIZE_STRING);
     }
-    public function setMysqliConnection()
+    public function getMysqliConnection() //not set because this function return u a connection
     {
       $this->con = mysqli_connect($this->dbserver, $this->dbuser, $this->dbpassword, $this->dbname);
       if ($this->con) 
@@ -34,4 +34,8 @@ class Myconnection
     
     
 }
+
+//$ob=new Myconnection("localhost", "root", "", "nigella");
+
+
 ?>
